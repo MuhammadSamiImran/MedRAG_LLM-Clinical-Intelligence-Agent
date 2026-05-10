@@ -1,0 +1,14 @@
+# Secret keys — never upload these
+.env
+
+# Vector database — too large for GitHub
+chroma_db/
+
+# Python cache files — not needed
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment — not needed
+venv/
+.venv/
