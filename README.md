@@ -52,6 +52,40 @@ This project was developed through a modular **9-Stage Framework**, progressing 
 
 ---
 
+### Setup and Installation
+1. Clone the repository
+bashgit clone https://github.com/MuhammadSamiImran/MedRAG_LLM-Clinical-Intelligence-Agent.git
+cd MedRAG_LLM-Clinical-Intelligence-Agent
+
+2. Install dependencies
+bashpip install -r requirements.txt
+
+3. Get a free Groq API key
+Go to console.groq.com
+Sign up for free
+Create a new API key
+
+4. Set up your API key
+bashcp .env.example .env
+Open .env and add your key:
+GROQ_API_KEY=your_groq_api_key_here
+
+5. Add medical documents
+Create a folder called medical_docs in the project root and add your PDF files:
+MedRAG_LLM-Clinical-Intelligence-Agent/
+└── medical_docs/
+    ├── diabetes.pdf
+    ├── malaria.pdf
+    └── hypertension.pdf
+
+6. Build the vector database
+Run this once to process your PDFs and create the ChromaDB vector store:
+python -m step6_vector_store.py
+
+7. Launch the app
+bashstreamlit run app.py
+Your browser will open at http://localhost:8501
+
 ##  Disclaimer
 
 *This project is for informational and educational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a physician or other qualified health provider with any questions you may have regarding a medical condition.*
